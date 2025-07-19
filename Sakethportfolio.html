@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Student Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light background */
+            color: #333;
+        }
+        .section-heading {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background-color: #4FD1C5; /* Accent color */
+            border-radius: 2px;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #4FD1C5; /* Accent color on hover */
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="min-h-screen flex flex-col">
+        <!-- Navbar -->
+        <nav class="bg-white shadow-sm py-4 sticky top-0 z-50">
+            <div class="container mx-auto px-4 flex justify-between items-center">
+                <a href="#hero" class="text-2xl font-bold text-gray-900">SAKETH</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link text-gray-700 hover:text-gray-900 font-medium">About</a>
+                    <a href="#skills" class="nav-link text-gray-700 hover:text-gray-900 font-medium">Skills</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-gray-900 font-medium">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-gray-900 font-medium">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
+                <a href="#about" class="block text-gray-700 hover:text-gray-900 font-medium">About</a>
+                <a href="#skills" class="block text-gray-700 hover:text-gray-900 font-medium">Skills</a>
+                <a href="#projects" class="block text-gray-700 hover:text-gray-900 font-medium">Projects</a>
+                <a href="#contact" class="block text-gray-700 hover:text-gray-900 font-medium">Contact</a>
+            </div>
+        </nav>
+
+        <main class="flex-grow">
+            <!-- Hero Section -->
+            <section id="hero" class="relative bg-gradient-to-r from-teal-500 to-cyan-600 text-white py-20 md:py-32 flex items-center justify-center text-center">
+                <div class="container mx-auto px-4">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
+                        Hi, I'm <span class="text-white">Saketh Sai</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 animate-fade-in-up animation-delay-300">
+                        A passionate <span class="font-semibold">Student Developer</span> with a keen interest in <span class="font-semibold">exploring various domains</span>.
+                    </p>
+                    <a href="#projects" class="inline-block bg-white text-teal-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 animate-fade-in-up animation-delay-600">
+                        View My Work
+                    </a>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="py-16 md:py-24 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center section-heading mx-auto">About Me</h2>
+                    <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                        <div class="md:w-1/3 mb-8 md:mb-0">
+                            <img src="https://placehold.co/400x400/E0F2F7/26A69A?text=Your+Photo" alt="Your Photo" class="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover mx-auto shadow-lg border-4 border-white">
+                        </div>
+                        <div class="md:w-2/3 text-lg text-gray-700 leading-relaxed">
+                            <p class="mb-4">
+                                I am a second-year Computer Science student at Dayanand sagar university, specializing in full-stack web development. My academic journey has equipped me with a strong foundation in data structures, algorithms, and software engineering principles. I am constantly seeking opportunities to apply my knowledge to real-world problems and build impactful solutions.
+                            </p>
+                            <p class="mb-4">
+                                My passion lies in creating intuitive and efficient web applications. I enjoy the entire development lifecycle, from conceptualizing ideas and designing user interfaces to writing clean, maintainable code and deploying robust systems. I am a quick learner and thrive in collaborative environments where I can contribute to innovative projects.
+                            </p>
+                            <p>
+                                Outside of my studies, I enjoy playing games, video and image editing ,read novels. These activities help me stay creative and continuously learn new things.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="py-16 md:py-24">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center section-heading mx-auto">My Skills</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <div class="text-4xl mb-3">💻</div>
+                            <h3 class="text-xl font-semibold mb-2">Programming Languages</h3>
+                            <ul class="text-gray-700 text-sm">
+                                <li>Python</li>
+                                <li>Java</li>
+                                <li>C++</li>
+                            </ul>
+       
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <div class="text-4xl mb-3">🎬</div>
+                            <h3 class="text-xl font-semibold mb-2">Editing</h3>
+                            <ul class="text-gray-700 text-sm">
+                                <li>Image</li>
+                                <li>Video</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="py-16 md:py-24 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center section-heading mx-auto">My Projects</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Project 1 -->
+                        <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+                            <img src="https://placehold.co/600x400/A7D9E0/333?text=Project+1" alt="Project 1" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2 text-gray-900">Project Title One</h3>
+                                <p class="text-gray-700 text-sm mb-4">
+                                    A brief description of Project One, highlighting its purpose, key features, and technologies used. This could be a web application for task management.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-0.5 rounded-full">React.js</span>
+                                    <span class="bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Node.js</span>
+                                    <span class="bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-0.5 rounded-full">MongoDB</span>
+                                </div>
+                                <a href="#" class="text-teal-600 hover:text-teal-800 font-semibold text-sm inline-flex items-center">
+                                    View Project
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.25 10.5L21 14.25M21 14.25L17.25 18M21 14.25H3"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Project 2 -->
+                        <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+                            <img src="https://placehold.co/600x400/D0E8F2/333?text=Project+2" alt="Project 2" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2 text-gray-900">Project Title Two</h3>
+                                <p class="text-gray-700 text-sm mb-4">
+                                    A brief description of Project Two, focusing on a data visualization tool built using Python and D3.js (or Chart.js for canvas).
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Python</span>
+                                    <span class="bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Flask</span>
+                                    <span class="bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Chart.js</span>
+                                </div>
+                                <a href="#" class="text-teal-600 hover:text-teal-800 font-semibold text-sm inline-flex items-center">
+                                    View Project
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.25 10.5L21 14.25M21 14.25L17.25 18M21 14.25H3"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Project 3 -->
+                        <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+                            <img src="https://placehold.co/600x400/C1E5EC/333?text=Project+3" alt="Project 3" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2 text-gray-900">Project Title Three</h3>
+                                <p class="text-gray-700 text-sm mb-4">
+                                    A brief description of Project Three, perhaps an e-commerce platform prototype or a mobile application concept.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-0.5 rounded-full">HTML</span>
+                                    <span class="bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-0.5 rounded-full">CSS</span>
+                                    <span class="bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-0.5 rounded-full">JavaScript</span>
+                                </div>
+                                <a href="#" class="text-teal-600 hover:text-teal-800 font-semibold text-sm inline-flex items-center">
+                                    View Project
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.25 10.5L21 14.25M21 14.25L17.25 18M21 14.25H3"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="py-16 md:py-24 bg-white">
+                <div class="container mx-auto px-4 max-w-2xl">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center section-heading mx-auto">Get In Touch</h2>
+                    <p class="text-lg text-gray-700 mb-8 text-center">
+                        I'm always open to discussing new projects, collaborations, or opportunities. Feel free to reach out!
+                    </p>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm" placeholder="your.email@example.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="5" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm" placeholder="Your message..."></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition duration-300">
+                                Send Message
+                                <svg class="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="container mx-auto px-4 text-center text-sm">
+                <p>&copy; 2025 Saketh. All rights reserved.</p>
+                <div class="mt-4 flex justify-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">LinkedIn</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">GitHub</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Twitter</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu after clicking a link
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
